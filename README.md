@@ -7,6 +7,7 @@ url= https://anubhav-fortsu.onrender.com
 
 Used MailTrap to verify email is sent properly
 Used nodemailer to send email 
+Used xlsx package to read excel file
 
 
 
