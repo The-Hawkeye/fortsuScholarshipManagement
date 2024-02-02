@@ -6,7 +6,6 @@ import Row from "./Row";
 
 const Table = ({
   users,
-  selectedRows,
   handleRowSelection,
   handleEdit,
   handleDelete,

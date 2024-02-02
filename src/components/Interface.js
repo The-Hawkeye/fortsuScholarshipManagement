@@ -5,8 +5,8 @@ import "../styles/style.css";
 import { toast } from "react-toastify";
 import Table from "./Table";
 import PageHandler from "./PageHandler";
-import EditData from "./EditData";
-import { ToastContainer } from "react-toastify";
+// import EditData from "./EditData";
+// import { ToastContainer } from "react-toastify";
 
 
 const URL = "https://anubhav-fortsu.onrender.com";
