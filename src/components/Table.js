@@ -23,16 +23,18 @@ const Table = ({
       <thead>
         <tr>
           
-          <th className="w-1/10">Name</th>
-          <th className="w-1/10 ">Email</th>
-          <th className="w-1/10">Roll Number</th>
-          <th className="w-1/10">Mobile Number</th>
-          <th className="w-1/10">City</th>
-          <th className="w-1/10">State</th>
-          <th className="w-1/10">Graduation Year</th>
-          <th className="w-1/10">Branch</th>
-          <th className="w-1/10">Current Year</th>
-          <th className="w-1/10">Actions</th>
+          <th className="w-1/12">Name</th>
+          <th className="w-1/12 ">Email</th>
+          <th className="w-1/12">Roll Number</th>
+          <th className="w-1/12">Mobile Number</th>
+          <th className="w-1/12">City</th>
+          <th className="w-1/12">State</th>
+          <th className="w-1/12">Graduation Year</th>
+          <th className="w-1/12">Branch</th>
+          <th className="w-1/12">Current Year</th>
+          <th className="w-1/12">CGPA</th>
+          <th className="w-1/12">Attendence(%)</th>
+          <th className="w-1/12">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -40,7 +42,7 @@ const Table = ({
           <Row
             key={user.id}
             user={user}
-            selected={selectedRows.includes(user.id)}
+            // selected={selectedRows.includes(user.id)}
             handleRowSelection={handleRowSelection}
             handleEdit={handleEdit}
             handleDelete={handleDelete}

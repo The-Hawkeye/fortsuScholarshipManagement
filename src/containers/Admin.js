@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Admin() {
   return (
-    <div className="Main">
+    <div className="Main" style={{height:"100vh"}}>
 
       <Interface />
       

@@ -4,6 +4,9 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const LoginPage = () => {
+
+
+    const url = "https://anubhav-fortsu.onrender.com/api/v1/admin/login"
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
@@ -20,9 +23,10 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(``, formData);
+            const res = await axios.post(url, formData);
+            console.log(res)
 
-            if (res.data.success) {
+            if (res.data.status==="loggedIn") {
                 toast.success("Logged In Successfully!");
                 navigate(`/admin`);
             }

@@ -12,22 +12,25 @@ const Row = ({
 }) => {
 
   console.log(toggle,"row")
+  
 
   return (
     <tr className='bg-white'>
-      
-      <td>{user.name}</td>
-      <td >{user.email}</td>
-      <td>{user.rollNumber}</td>
-      <td>{`${user.mobileNumber}`}</td>
-      <td>{`${user.city}`}</td>
-      <td>{`${user.state}`}</td>
-      <td>{`${user.graduationYear}`}</td>
-      <td>{`${user.branch}`}</td>
-      <td>{`${user.currentYear}`}</td>
-      {edit===user._id && <div><EditData edit={edit} setEdit={setEdit} user={user} setToggle={setToggle} toggle={toggle}/></div>}
-      <td className="btn-container">
-        <button onClick={() => 
+     
+      <td>{user.name?user.name:""}</td>
+      <td >{user.email?user.email:""}</td>
+      <td>{user.rollNumber?user.rollNUmber:""}</td>
+      <td>{`${user.mobileNumber?user.mobileNumber:""}`}</td>
+      <td>{`${user.city?user.city:""}`}</td>
+      <td>{`${user.state?user.state:""}`}</td>
+      <td>{`${user.graduationYear?user.graduationYear:""}`}</td>
+      <td>{`${user.branch?user.branch:""}`}</td>
+      <td>{`${user.currentYear?user.currentYear:""}`}</td>
+      <td>{user.CGPA?user.CGPA:""}</td>
+      <td>{user.attendence?user.attendence:""}</td>
+      {edit===user.email && <div><EditData edit={edit} setEdit={setEdit} user={user} setToggle={setToggle} toggle={toggle}/></div>}
+      <td className={!user.scholarshipSent && "btn-container"}>
+       { user.scholarshipSent? ("Success") : (<><button onClick={() => 
         {
           
           
@@ -43,6 +46,9 @@ const Row = ({
 </svg>
 
         </button>
+        </>
+        )
+       }
       </td>
     </tr>
   );
